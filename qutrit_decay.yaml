@@ -1,0 +1,25 @@
+Q0:
+    T1_GE: 40
+    Tphi_GE: 50
+    T1_EF: 26
+    Tphi_EF: 45
+Q1:
+    T1_GE: 50
+    Tphi_GE: 33
+    T1_EF: 60
+    Tphi_EF: 35
+Q2:
+    T1_GE: 40
+    Tphi_GE: 50
+    T1_EF: 26
+    Tphi_EF: 45
+Q3:
+    T1_GE: 50
+    Tphi_GE: 33
+    T1_EF: 60
+    Tphi_EF: 35
+Q4:
+    T1_GE: 40
+    Tphi_GE: 50
+    T1_EF: 26
+    Tphi_EF: 45

@@ -1,0 +1,52 @@
+Q0Q1:
+    Q0GE:
+        Q1inE: -0.2805
+        Q1inF: 0.164
+    Q0EF:
+        Q1inE: -0.2484
+        Q1inF: -0.9032
+    Q1GE:
+        Q0inE: -0.2782
+        Q0inF: -0.5283
+    Q1EF:
+        Q0inE: 0.4372
+        Q0inF: -0.2147
+Q7Q0:
+    Q7GE:
+        Q0inE: -0.1387
+        Q0inF: 0.1556
+    Q7EF:
+        Q0inE: -0.2033
+        Q0inF: -0.5132
+    Q0GE:
+        Q7inE: -0.1377
+        Q7inF: -0.3222
+    Q0EF:
+        Q7inE: 0.2978
+        Q7inF: 0.0064
+Q6Q7:
+    Q6GE:
+        Q7inE: -0.2777
+        Q7inF: -0.6247
+    Q6EF:
+        Q7inE: 0.5164
+        Q7inF: -0.114
+    Q7GE:
+        Q6inE: -0.2743
+        Q6inF: 0.249
+    Q7EF:
+        Q6inE: -0.3586
+        Q6inF: -0.9935
+Q5Q6:
+    Q5GE:
+        Q6inE: -0.2597
+        Q6inF: -0.4944
+    Q5EF:
+        Q6inE: 0.4063
+        Q6inF: -0.2129
+    Q6GE:
+        Q5inE: -0.2638
+        Q5inF: 0.1458
+    Q6EF:
+        Q5inE: -0.2336
+        Q5inF: -0.8539
