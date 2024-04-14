@@ -6,25 +6,25 @@ import yaml
 import os
 import sys
 from qnl_projects.BHDecoder.qutrit_utils import get_ZZ_parameters
-import numpy as np
 
-# check that this script is being run from the base directory
-# (otherwise the file loading doesn't work properly)
-curdir = os.getcwd()
-if curdir[-7:] != 'bhcalcs':
-    sys.exit('Please rerun this from the base directory. Aborting')
+# Define the file paths
+measured_ZZ_file = os.path.join("bhcalcs", "ZZ_values_measured.yaml")
+eigenergies_file = os.path.join("bhcalcs", "ZZ_eigenergies.yaml")
 
-# load measured ZZ values
-with open('ZZ_values_measured.yaml', 'r') as f:
-    ZZ_values_measured = yaml.load(f)
+# Check if the script is being run from the base directory
+if not os.path.basename(os.getcwd()) == 'bhcalcs':
+    sys.exit('Please rerun this script from the base directory. Aborting')
 
+# Load measured ZZ values
+with open(measured_ZZ_file, 'r') as f:
+    ZZ_values_measured = yaml.safe_load(f)
+
+# Convert measured ZZ values to energies
 calculated_ZZ_eigenergies = {}
-# convert to energies
-for qutrit_pair,qutrit_measured_ZZ in ZZ_values_measured.items():
-    q0 = int(qutrit_pair[1])
-    q1 = int(qutrit_pair[3])
-
+for qutrit_pair, qutrit_measured_ZZ in ZZ_values_measured.items():
+    q0, q1 = int(qutrit_pair[1]), int(qutrit_pair[3])
     calculated_ZZ_eigenergies[qutrit_pair] = get_ZZ_parameters(q0, q1, qutrit_measured_ZZ)[0]
 
-with open('ZZ_eigenergies.yaml', 'w') as f:
-    ZZ_values_measured = yaml.dump(calculated_ZZ_eigenergies, f, default_flow_style=False)
+# Save calculated ZZ energies to file
+with open(eigenergies_file, 'w') as f:
+    yaml.dump(calculated_ZZ_eigenergies, f, default_flow_style=False)
